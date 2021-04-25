@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+ 
+<div class="pmRoutineContainer">
+    <div class="pmRoutineBox">
+    <div class="pmRoutineTitle">
+    <a href='/evening/routine/add/form/'><button class="routineBtn">Add Evening Routine</button></a>
+</div>        
+<div class="routine-flex">
+{% for r in routine %}
+<div class="routine-info">
+    <p>Cleanser: {{ r.Cleanser }}</p>
+    <p>Toner: {{ r.Toner }}</p>
+    <p>Exfoliator: {{ r.Exfoliator }}</p>
+    <p>Serum: {{ r.Serum }}</p>
+    <p>Moisturizer: {{ r.Moisturizer }}</p>
+    <p>Eye Cream: {{ r.Eye }}</p>
+    <p>Face Oil: {{ r.Oil }}</p>
+    <p>Sunscreen: {{ r.Sunscreen }}</p>
+    <p>Facial Peel: {{ r.Peel }}</p>
+    <p>Mask: {{ r.Cleanser }}</p>
+    <p>Mist: {{ r.Mist }}</p>
+    </div>
+{% endfor %}
+</div>
+</div>
+</div>
+ 
+{% endblock %}
+
